@@ -32,8 +32,7 @@ def init():
 
 
 def collect():
-    print "Commonly-used channels 1, 6, and 11 will be monitored by default"
-    monitorChannels = input('Please select any other channels you wish to monitor: ')
+    print "All channels in range 1-11 on 2.5 GHz will be monitored by default"
     subprocess.call(["airodump-ng", "-c", "1,2,3,4,5,6,7,8,9,10,11", wiFi.wireless])
 
 
