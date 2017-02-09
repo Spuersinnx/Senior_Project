@@ -13,11 +13,9 @@ def init():
         print "Enabling bluetooth adapter.."
         subprocess.call(["hciconfig", interface, "up"])
 
+
 def scan():
-    subprocess.call(["bluelog", "-c","-m","-n"])
-
-
-
+    subprocess.call(["bluelog", "-c", "-m", "-n"])
 
 
 if __name__ == '__main__':
