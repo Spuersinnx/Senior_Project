@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 import subprocess
 import time
+import fnmatch
+import os
 
 
 def init():
@@ -15,7 +17,11 @@ def init():
 
 
 def scan():
-    subprocess.call(["bluelog", "-c", "-m", "-n"])
+    seconds = 60
+    print 'Running Bluelog for ' + str(seconds) + ' seconds\n'
+    bluelog = subprocess.Popen(["bluelog", "-c", "-m", "-n"])
+    time.sleep(seconds)
+    bluelog.terminate()
 
 
 if __name__ == '__main__':
