@@ -40,7 +40,7 @@ def target():
                 macAddrArray.add(matchResult.group(0))
 
     for item in list(macAddrArray):
-        print item
+        subprocess.call(["sdptool", "browse", item])
 
 
 if __name__ == '__main__':
